@@ -1,18 +1,19 @@
 <%--
   Created by IntelliJ IDEA.
-  User: new
-  Date: 2021/3/15
-  Time: 10:24
+  User: xiame
+  Date: 2021/4/6
+  Time: 21:59
   To change this template use File | Settings | File Templates.
 --%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<html>
 <%@include file="header.jsp"%>
 This is my JSP page.<br>
 <head>
     <title>New User Registration ! !</title>
     <style type="text/css">
         *{margin: 0;
-            padding: 0;
-        }
+        padding: 0;}
         body{color:white}/*标签选择器*/
         .context{background: #50A3A2;
             position: absolute;
@@ -30,7 +31,7 @@ This is my JSP page.<br>
             text-align: center;
             margin: 0 auto; /*居中显示*/
         }
-        .container h1{
+        .container h1{/*派生*/
             font-size: 40px;
             font-weight: 300;
         }
@@ -65,11 +66,14 @@ This is my JSP page.<br>
             font-size: 16px;
         }
         form button:hover{
-            background:#CCC; /*鼠标移动上去按钮颜色变灰色*/
+            background:#CCC;
         }
     </style>
 </head>
+<body>
+
 <div class="context">
+
     <div class="container">
         <h1>Welcome</h1>
         <form method="post" action = "Register">
@@ -78,12 +82,13 @@ This is my JSP page.<br>
             <input type="Email"  name="email" pattern="^[a-z0-9]+([._\\-]*[a-z0-9])*@([a-z0-9]+[-a-z0-9]*[a-z0-9]+.){1,63}[a-z0-9]+$" placeholder="Email"/>
             <p>Gander :</p><br>
             <input type="radio" name="gander" value="male">male <input type="radio" name="gander" value="female"/>female
-            <input type="radio" name="gender" value="male">male <input type="radio" name="gender" value="female"/>female
             <input type="date"  name="birthdate" placeholder="Birthdate(yyy-mm-dd)"/>
-            <button type="submit">  Register Now！！ </button>
-            <button type="submit">  Register Now  </button>
+            <button type="submit">  Register！！ </button>
         </form>
     </div>
 
+
 </div>
+</body>
+</html>
 <%@include file="footer.jsp"%>
